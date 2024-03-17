@@ -16,8 +16,8 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', function () {
-    //return view('welcome');
-    return view('home.home');
+    return view('welcome');
+    //return view('home.home');
 });
 Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/register', 'register')->name('register');

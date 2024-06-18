@@ -105,7 +105,7 @@ class LoginRegisterController extends Controller
         {
             $products = Product::latest()->paginate(5);
         
-        return view('auth.dashboard',compact('products'))
+        return view('auth.index',compact('products'))
                     ->with('i', (request()->input('page', 1) - 1) * 5);
             //return view('auth.dashboard');
         }
